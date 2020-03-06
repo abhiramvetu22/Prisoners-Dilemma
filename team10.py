@@ -24,7 +24,15 @@ def move(my_history, their_history, my_score, their_score):
     # The most recent round is my_history[-1] and their_history[-1].
 
     
-    return 'b'
+    count = their_history.count('b')
+    
+    if len(my_history)==0:
+        return 'b'
+    elif count%2 == 0:
+        return 'b'
+    elif count%2 == 1:
+        return 'c'
+
 
     
 def test_move(my_history, their_history, my_score, their_score, result):
